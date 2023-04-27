@@ -9,10 +9,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  function addMovieHandler(movie) {
-    console.log(movie);
-  }
-
   const fetchMoviesHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -42,6 +38,21 @@ export default function App() {
   useEffect(() => {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
+
+  async function addMovieHandler(movie) {
+    const response = await fetch(
+      "https://movielist-0808-default-rtdb.firebaseio.com/movies.json",
+      {
+        method: "POST",
+        body: JSON.stringify(movie),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  }
 
   let content = <p>Nothing Found</p>;
 
