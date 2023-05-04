@@ -28,9 +28,7 @@ export default function Checkout(props) {
 
     const enteredNameIsValid = !isEmpty(enteredName);
     const enteredStreetIsValid = !isEmpty(enteredStreet);
-    const enteredPostalCodeIsValid = console.log(
-      !isNotFiveChars(enteredPostalCode)
-    );
+    const enteredPostalCodeIsValid = !isNotFiveChars(enteredPostalCode);
     const enteredCityIsValid = !isEmpty(enteredCity);
 
     setFormInputsValidty({
@@ -50,41 +48,47 @@ export default function Checkout(props) {
       return;
       //Submit Cart Data
     }
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostalCode,
+    });
   };
 
-  const formName = `${style.control} ${
+  const formControlName = `${style.control} ${
     formInputValidity.name ? "" : style.invalid
   }`;
-  const formStreet = `${style.control} ${
+  const formControlStreet = `${style.control} ${
     formInputValidity.street ? "" : style.invalid
   }`;
-  const formPostalCode = `${style.control} ${
+  const formControlPostalCode = `${style.control} ${
     formInputValidity.postalCode ? "" : style.invalid
   }`;
-  const formCity = `${style.control} ${
+  const formControlCity = `${style.control} ${
     formInputValidity.city ? "" : style.invalid
   }`;
 
   return (
     <form className={style.form} onSubmit={confirmHandler}>
-      <div className={formName}>
+      <div className={formControlName}>
         <label htmlFor="name">Your Name</label>
         <input type="text" id="name" ref={nameInputRef} />
         {!formInputValidity.name && <p>Please enter a valid name.</p>}
       </div>
-      <div className={formStreet}>
+      <div className={formControlStreet}>
         <label htmlFor="street">Street</label>
         <input type="text" id="street" ref={streetInputRef} />
         {!formInputValidity.street && <p>Please enter a valid street</p>}
       </div>
-      <div className={formPostalCode}>
+      <div className={formControlPostalCode}>
         <label htmlFor="postal">Postal Code</label>
         <input type="text" id="postal" ref={postalCodeInputRef} />
         {!formInputValidity.postalCode && (
           <p>Please enter a valid postal code</p>
         )}
       </div>
-      <div className={formCity}>
+      <div className={formControlCity}>
         <label htmlFor="city">City</label>
         <input type="text" id="city" ref={cityInputRef} />
         {!formInputValidity.city && <p>Please enter a valid city</p>}
