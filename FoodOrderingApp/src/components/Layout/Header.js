@@ -11,7 +11,7 @@ export default function Header(props) {
   return (
     <Fragment>
       <header className={style.header}>
-        <h1>ReactMeals</h1>
+        <h1>ReactPizza</h1>
         <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <div className={style["header-image"]}>
