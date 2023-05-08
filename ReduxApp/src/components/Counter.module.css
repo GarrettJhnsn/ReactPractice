@@ -21,3 +21,16 @@
   margin: 2rem 0;
   font-weight: bold;
 }
+
+.counter button {
+  margin: 1rem;
+}
+
+.counter input {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid #3c0080;
+  text-decoration: none;
+  
+}

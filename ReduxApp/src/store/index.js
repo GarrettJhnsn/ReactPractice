@@ -1,27 +1,12 @@
-import { legacy_createStore as createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./auth";
+import counterReducer from "./counter";
 
-const counterReducer = (state = { counter: 0 }, action) => {
-  if (action.type === "increment") {
-    return {
-      counter: state.counter + 1,
-    };
-  }
-  if (action.type === "decrement") {
-    return {
-      counter: state.counter - 1,
-    };
-  }
-  return state;
-};
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+    auth: authReducer,
+  },
+});
 
-const store = createStore(counterReducer);
-
-const counterSubscriber = () => {
-  const latestState = store.getState();
-  console.log(latestState);
-};
-
-store.subscribe(counterSubscriber);
-
-store.dispatch({ type: "increment" });
-store.dispatch({ type: "decrement" });
+export default store;
