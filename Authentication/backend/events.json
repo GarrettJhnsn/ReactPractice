@@ -1,12 +1,1 @@
-{
-  "events": [
-    {
-      "title": "A new event",
-      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
-      "date": "2022-10-01",
-      "description": "Some awesome event!",
-      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
-    }
-  ],
-  "users": []
-}
+{"events":[{"title":"Cake","image":"https://www.foodandwine.com/thmb/G8SuZEOz_nZDI-2JHStyOGA4eqs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/The-Bear-Chocolate-Cake-FT-RECIPE0323-a6a4c882ba8f49e69caeaeda83abbe38.jpg","date":"2023-05-25","description":"Cake Day!","id":"d4b63f9f-7708-4158-aff4-ec4ec00a97e0"}],"users":[{"email":"garrettjhns0n8@gmail.com","password":"$2a$12$Hvp5RXN6gpz5iVKO5Ety2.mzBVe15WQB0mEw1gd/...O1vfn5Lmly","id":"ff50c1b1-2e34-4cda-a2b0-8ca643fec770"},{"email":"test@test.com","password":"$2a$12$WAp9fJCLYON3.f.Yswm9uuURnBQNbSt0OAY.F0CMmQe8KMTmv5JMC","id":"f14e9bf6-4004-4ea7-806a-8b60238c6a64"},{"email":"Garrettjhns0n8@gmail.com","password":"$2a$12$NMcrCrDWj0SZLET1.0YD1.P//3evsuLIPYOUbJPN/BJDzke01Dls.","id":"9f751b1f-c0fd-47d5-9b8c-0de06426f09d"}]}
